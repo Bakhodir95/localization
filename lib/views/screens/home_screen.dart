@@ -14,6 +14,18 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(AppLocalizations.of(context)!.helloWorld),
+        centerTitle: true,
+        leadingWidth: 100,
+        leading: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Text(AppLocalizations.of(context)!.apple),
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Text(AppLocalizations.of(context)!.iPhone_15_ProMax),
+          )
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
@@ -31,7 +43,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     lastDate: DateTime(2200),
                     onDateChanged: (value) {});
               }),
-            )
+            ),
+            Text(AppLocalizations.of(context)!.hello("Bahodir")),
+            Text(AppLocalizations.of(context)!.apples(73000)),
           ],
         ),
       ),
